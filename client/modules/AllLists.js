@@ -23,6 +23,9 @@ export default class AllLists extends React.Component{
         <div className="space">
         </div>
         <div className="row">
+          { this.state.tours.map((listElement)=>
+            <ListElement listElement={listElement} key={listElement.id}/> 
+          )}
           { this.props.tours.tours ? this.props.tours.tours.map( listElement =>
             <ListElement listElement={listElement} 
               key={listElement.id}/> 
