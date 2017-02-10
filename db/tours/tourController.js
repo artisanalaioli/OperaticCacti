@@ -56,9 +56,23 @@ var tourController = {
 
   /**
   * get all tours for certain date
+  * req.body should have startTime and endTime
   */
   getAllByDate: function(req, res) {
-
+    TimeTable.findAll({start: req.body.startTime, end: req.body.endTime})
+      .then(function(timetablequeries) {
+        var promises = timetablequeries.map(function(timetablequery) {
+          return Tour.findAll({id: timetablequery.tourId});
+        });
+        return Promise.all(promises);
+      })
+      .then(function(tours) {
+        res.send(tours);
+        res.sendStatus(200);
+      })
+      .catch(function(err) {
+        console.log('error in get all tours by date');
+      })
   },
   /**
   * get all tours for certain date

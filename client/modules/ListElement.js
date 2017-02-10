@@ -2,30 +2,43 @@ import React from 'react'
 import NavLink from './NavLink'
 
 export default class ListElement extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const divStyle = {
         backgroundImage: 'url(' + this.props.listElement.image + ')'
     }
 
-    const href = "/Tours/" + this.props.listElement.id;
-
     return (
+// <<<<<<< HEAD
       <div className="col col-md-4 listElement card">
         <NavLink to={href}>
           <img className="card-img-top" src="" alt="card image" />
           <div className="card-block">
             <h4 className="card-tittle">tour title</h4>
             <p className="card-text">tour price</p>
+// =======
+      <div className="col-md-4 listElement">
+        <NavLink to={"/Tours/" + this.props.listElement.id}>
+          <div>
+            <div className="listImage center-cropped" style={divStyle}>
+            </div>
+          </div>
+          <div className="bottomRow text-center">
+            <div className="priceAndTitle">
+              <span className="price">
+                {'$' + this.props.listElement.price}
+              </span>
+              <span className="title">
+                {this.props.listElement.title}
+              </span>
+            </div>
+// >>>>>>> upstream/master
           </div>
         </NavLink>
       </div>
     );
   }
 }
+// <<<<<<< HEAD
 
 // <NavLink to="/" onlyActiveOnIndex>Home</NavLink>
 
@@ -91,3 +104,5 @@ export default class ListElement extends React.Component {
 // });
 
 
+// =======
+// >>>>>>> upstream/master

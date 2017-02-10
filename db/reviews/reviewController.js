@@ -8,6 +8,7 @@ var reviewController = {
     //   content: content,
     //   time: time // this maybe not necessary, since query has timestamp  
     // }
+
   post: function(req, res) {
     console.log('post a review, req.body = ', req.body);
     Review.create(req.body) 
@@ -37,6 +38,7 @@ var reviewController = {
         where: {name: guideName}
       }]
     })
+
   }
 }
 
