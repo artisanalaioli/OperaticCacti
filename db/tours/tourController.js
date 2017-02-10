@@ -22,6 +22,22 @@ var tourController = {
   }, 
 
   /**
+  * get all tours for certain user
+  */ 
+
+  /**
+  * get all tours for certain date
+  */
+
+  /**
+  * get all tours for certain date
+  */
+
+  /**
+  * get all tours for certain user and replace the location_id, availability_id
+  */
+
+  /**
   * req.body.filers should be an object 
   * such as {location: 'San Francisco', duration: '2 hours'}
   */   
