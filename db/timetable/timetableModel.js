@@ -11,5 +11,7 @@ var TimeTable = db.define('timetable', {
 	}
 });
 
-db.sync();
+db.sync({
+	force: true
+});
 module.exports = TimeTable;

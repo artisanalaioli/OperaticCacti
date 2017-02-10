@@ -26,12 +26,14 @@ export default class AllLists extends React.Component{
           { this.state.tours.map((listElement)=>
             <ListElement listElement={listElement} key={listElement.id}/> 
           )}
-          { this.props.tours.tours ? this.props.tours.tours.map( listElement =>
-            <ListElement listElement={listElement} 
-              key={listElement.id}/> 
-          ) : <h1>LOADING</h1>}
+
         </div>
       </div>
     )
   }
 }
+
+          // { this.props.tours.tours ? this.props.tours.tours.map( listElement =>
+          //   <ListElement listElement={listElement} 
+          //     key={listElement.id}/> 
+          // ) : <h1>LOADING</h1>}

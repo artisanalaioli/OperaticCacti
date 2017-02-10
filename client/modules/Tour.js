@@ -28,19 +28,51 @@ export default class Tour extends React.Component {
       backgroundImage: 'url(' + thisTour.image + ')'
     }
     return (
-      <div className="container text-center ">
-        <div className="space">
-        </div> 
+      <div className="container">
+
+        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" >
+          
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          
+          <div className="carousel-inner" role="listbox" >
+            <div className="carousel-item">
+              <img src="..." alt="..." />
+            </div>
+            <div className="carousel-item">
+              <img src="..." alt="..." />
+            </div>
+            <div className="carousel-item">
+              <img src="..." alt="..." />
+            </div>
+          </div>
+          
+          <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div className="space"></div> 
+
         <h1 className="text-center">
           {thisTour.title}
         </h1>
-        <div className="space">
-        </div> 
+
+        <div className="space"></div> 
+
         <div className="center-cropped-tour col-md-6" style={divStyle}>
         </div>
-        <div className="space">
-        </div>
+
+        <div className="space"></div>
+
         <h3>Tour guide:{thisTour.tourGuide}</h3>
+
         <h3>Price:{thisTour.price}</h3>
         <h3>Time:{thisTour.time}</h3>
         <p>{thisTour.description}</p>

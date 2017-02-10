@@ -14,21 +14,12 @@ export default class ListElement extends React.Component {
     const href = "/Tours/" + this.props.listElement.id;
 
     return (
-      <div className="col-md-4 listElement">
+      <div className="col col-md-4 listElement card">
         <NavLink to={href}>
-          <div>
-            <div className="listImage center-cropped" style={divStyle}>
-            </div>
-          </div>
-          <div className="bottomRow text-center">
-            <div className="priceAndTitle">
-              <span className="price">
-                ${this.props.listElement.price}
-              </span>
-              <span className="title">
-                {this.props.listElement.title}
-              </span>
-            </div>
+          <img className="card-img-top" src="" alt="card image" />
+          <div className="card-block">
+            <h4 className="card-tittle">tour title</h4>
+            <p className="card-text">tour price</p>
           </div>
         </NavLink>
       </div>
@@ -36,7 +27,22 @@ export default class ListElement extends React.Component {
   }
 }
 
-//<NavLink to="/" onlyActiveOnIndex>Home</NavLink>
+// <NavLink to="/" onlyActiveOnIndex>Home</NavLink>
+
+          // <div>
+          //   <div className="listImage center-cropped" style={divStyle}>
+          //   </div>
+          // </div>
+          // <div className="bottomRow text-center">
+          //   <div className="priceAndTitle">
+          //     <span className="price">
+          //       ${this.props.listElement.price}
+          //     </span>
+          //     <span className="title">
+          //       {this.props.listElement.title}
+          //     </span>
+          //   </div>
+          // </div>
 
 
 // <image src={this.props.listElement.image} className="img-responsive center-block" alt="Responsive image" />  
